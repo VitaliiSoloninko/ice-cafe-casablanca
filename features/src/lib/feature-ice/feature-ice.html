@@ -1,0 +1,13 @@
+<lib-header></lib-header>
+
+<main class="ice-page">
+  <lib-title [title]="pageTitle"></lib-title>
+
+  <lib-product-list
+    [products]="iceProducts"
+    (productClick)="onProductClick($event)"
+  >
+  </lib-product-list>
+</main>
+
+<lib-footer></lib-footer>

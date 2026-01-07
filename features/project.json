@@ -1,0 +1,21 @@
+{
+  "name": "feature-ice",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "features/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "features/jest.config.cts",
+        "tsConfig": "features/tsconfig.spec.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

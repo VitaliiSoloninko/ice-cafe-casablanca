@@ -19,7 +19,8 @@
       "@ice-cafe-casablanca/data-access": ["shared/data-access/src/index.ts"],
       "@ice-cafe-casablanca/ui-layout": ["shared/ui-layout/src/index.ts"],
       "@ice-cafe-casablanca/ui-product": ["shared/ui-product/src/index.ts"],
-      "@ice-cafe-casablanca/util-seo": ["shared/util-seo/src/index.ts"]
+      "@ice-cafe-casablanca/util-seo": ["shared/util-seo/src/index.ts"],
+      "@ice-cafe-casablanca/feature-ice": ["features/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

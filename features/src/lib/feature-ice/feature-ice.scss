@@ -1,0 +1,16 @@
+.ice-page {
+  min-height: calc(100vh - 120px);
+  padding: 2rem 0;
+
+  lib-title {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  lib-product-list {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
