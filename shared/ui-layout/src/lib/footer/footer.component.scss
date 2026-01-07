@@ -1,0 +1,50 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+@media (min-width: $tablet) {
+  footer {
+    display: none;
+  }
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.footer__menu {
+  background-color: var(--main-color);
+  height: 70px;
+  color: var(--white-color);
+}
+
+.menu__list {
+  padding: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu__link {
+  width: 24px;
+  height: 24px;
+  color: white;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s ease 0s;
+
+  &.active {
+    background-color: var(--main-color-dark);
+  }
+}
+
+.menu__link {
+  &:hover,
+  &:focus-visible {
+    background-color: var(--main-color-dark);
+  }
+}

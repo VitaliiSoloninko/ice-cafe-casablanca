@@ -1,1 +1,4 @@
+export * from './lib/footer/footer.component';
+export * from './lib/header/header.component';
+export * from './lib/title/title.component';
 export * from './lib/ui-layout/ui-layout';

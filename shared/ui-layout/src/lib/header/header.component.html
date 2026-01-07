@@ -1,0 +1,30 @@
+<header class="header" [class.menu-open]="openMenu">
+  <div class="header__container">
+    <div class="header__menu menu">
+      <nav class="menu__body">
+        <ul class="menu__list">
+          @for (menuItem of menuItems; track menuItem.link) {
+            <li class="menu__item">
+              <a [routerLink]="menuItem.link" class="menu__link">{{
+                menuItem.name
+              }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </div>
+    <div class="header__actions">
+      <button
+        type="button"
+        class="menu__icon icon-menu"
+        (click)="openMenu = !openMenu"
+      >
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="header-bg">
+  <img src="/image/svg/bg-top.svg" alt="Image" />
+</div>

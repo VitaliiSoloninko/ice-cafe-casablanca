@@ -1,0 +1,35 @@
+<div
+  class="modal-backdrop"
+  (click)="onClose()"
+  (keyup.escape)="onClose()"
+  tabindex="0"
+  role="button"
+  aria-label="Close modal"
+></div>
+<div class="modal">
+  <button class="modal-close" (click)="onClose()">
+    <img src="/image/svg/x.svg" alt="x" />
+  </button>
+  @if (product) {
+    <div class="product__item">
+      <div class="item-header">
+        <div class="item-image">
+          <img [src]="product.image" alt="Image" />
+        </div>
+        <div class="item-price">
+          {{ product.price | currency: 'EUR' : 'symbol' }}
+        </div>
+      </div>
+      <div class="item-body">
+        <h4 class="item-title center">
+          <div class="item-link-title">
+            {{ product.name | uppercase }}
+          </div>
+        </h4>
+        <div class="item-description">
+          {{ product.description }}
+        </div>
+      </div>
+    </div>
+  }
+</div>

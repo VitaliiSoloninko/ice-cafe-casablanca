@@ -1,0 +1,12 @@
+.title-letter {
+  display: inline-block;
+  transform-origin: center bottom;
+
+  &.space {
+    width: 0.3em;
+  }
+}
+
+h1 {
+  perspective: 1000px;
+}
