@@ -1,0 +1,7 @@
+<lib-header />
+<lib-title [title]="pageTitle" />
+<lib-product-list
+  [products]="drinksProducts"
+  (productClick)="onProductClick($event)"
+/>
+<lib-footer />
