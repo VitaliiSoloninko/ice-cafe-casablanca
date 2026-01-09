@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-title',
@@ -7,12 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './title.component.html',
   styleUrl: './title.component.scss',
 })
-export class TitleComponent implements OnInit {
+export class TitleComponent {
   @Input() title = '';
-  titleLetters: string[] = [];
-
-  ngOnInit(): void {
-    // Split title into individual letters
-    this.titleLetters = this.title.split('');
-  }
 }

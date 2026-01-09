@@ -22,7 +22,6 @@ import { COLD_DRINKS } from 'shared/data-access/src/lib/data/drinks.data';
 })
 export class FeatureDrinks implements OnInit {
   drinksProducts: Product[] = [];
-  pageTitle = 'Напої';
 
   ngOnInit(): void {
     this.drinksProducts = COLD_DRINKS;
@@ -30,6 +29,5 @@ export class FeatureDrinks implements OnInit {
 
   onProductClick(product: Product): void {
     console.log('Product clicked:', product);
-    // TODO: відкрити modal з деталями
   }
 }

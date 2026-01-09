@@ -1,12 +1,12 @@
-.title-letter {
-  display: inline-block;
-  transform-origin: center bottom;
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
 
-  &.space {
-    width: 0.3em;
+  @media (max-width: 992px) {
+    font-size: 2rem;
   }
-}
-
-h1 {
-  perspective: 1000px;
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 }

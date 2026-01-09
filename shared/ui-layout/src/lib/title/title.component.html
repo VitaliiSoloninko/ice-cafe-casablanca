@@ -1,7 +1,3 @@
-<h1 class="h2 center">
-  @for (letter of titleLetters; track $index) {
-    <span class="title-letter" [class.space]="letter === ' '">
-      {{ letter === ' ' ? '\u00A0' : letter }}
-    </span>
-  }
+<h1 class="title">
+  {{ title }}
 </h1>

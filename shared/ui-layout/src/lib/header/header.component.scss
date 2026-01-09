@@ -31,7 +31,6 @@
   padding-bottom: 0.1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: var(--main-color);
   height: 60px;
   @media (max-width: 992px) {
     display: none;
@@ -69,8 +68,8 @@
 
   &__link {
     font-weight: 500;
-    line-height: 118.75%; /* 19/16 */
-    color: inherit;
+    line-height: 1.25;
+    color: #ffffff;
     text-decoration: none;
     position: relative;
     display: inline-block;

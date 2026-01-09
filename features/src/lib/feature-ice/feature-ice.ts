@@ -22,7 +22,6 @@ import { ProductListComponent } from '@ice-cafe-casablanca/ui-product';
 })
 export class FeatureIce implements OnInit {
   iceProducts: Product[] = [];
-  pageTitle = 'Морозиво';
 
   ngOnInit(): void {
     this.iceProducts = ICE_PRODUCTS;
@@ -30,6 +29,5 @@ export class FeatureIce implements OnInit {
 
   onProductClick(product: Product): void {
     console.log('Product clicked:', product);
-    // TODO: відкрити modal з деталями
   }
 }
