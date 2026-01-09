@@ -14,28 +14,26 @@ export interface MenuItem {
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  openMenu = false;
-
   menuItems: MenuItem[] = [
     {
       name: 'Eis',
-      link: 'ice',
+      link: '/ice',
     },
     {
       name: 'Getränke',
-      link: 'drink',
+      link: '/drink',
     },
     {
       name: 'Nachtisch',
-      link: 'desert',
+      link: '/desert',
     },
     {
       name: 'Essen',
-      link: 'food',
+      link: '/food',
     },
     {
       name: 'Kontakte',
-      link: 'contact',
+      link: '/contact',
     },
   ];
 }
