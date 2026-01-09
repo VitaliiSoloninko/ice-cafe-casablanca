@@ -19,6 +19,13 @@ export const appRoutes: Route[] = [
       import('@ice-cafe-casablanca/feature-food').then((m) => m.FeatureFood),
   },
   {
+    path: 'desert',
+    loadComponent: () =>
+      import('@ice-cafe-casablanca/feature-dessert').then(
+        (m) => m.FeatureDessert,
+      ),
+  },
+  {
     path: '',
     redirectTo: 'ice',
     pathMatch: 'full',

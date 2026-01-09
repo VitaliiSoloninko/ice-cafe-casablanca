@@ -1,4 +1,5 @@
 import { Route } from '@angular/router';
+import { FeatureDessert } from './feature-dessert/feature-dessert';
 import { FeatureDrinks } from './feature-drinks/feature-drinks';
 import { FeatureFood } from './feature-food/feature-food';
 import { FeatureIce } from './feature-ice/feature-ice';
@@ -11,4 +12,8 @@ export const featureDrinksRoutes: Route[] = [
 
 export const featureFoodRoutes: Route[] = [
   { path: '', component: FeatureFood },
+];
+
+export const featureDessertRoutes: Route[] = [
+  { path: '', component: FeatureDessert },
 ];

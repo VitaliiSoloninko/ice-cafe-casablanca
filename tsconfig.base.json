@@ -22,7 +22,8 @@
       "@ice-cafe-casablanca/util-seo": ["shared/util-seo/src/index.ts"],
       "@ice-cafe-casablanca/feature-ice": ["features/src/index.ts"],
       "@ice-cafe-casablanca/feature-drinks": ["features/src/index.ts"],
-      "@ice-cafe-casablanca/feature-food": ["features/src/index.ts"]
+      "@ice-cafe-casablanca/feature-food": ["features/src/index.ts"],
+      "@ice-cafe-casablanca/feature-dessert": ["features/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
