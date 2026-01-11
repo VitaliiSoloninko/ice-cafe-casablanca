@@ -1,7 +1,11 @@
 <lib-header />
-<lib-title title="Essen" />
-<lib-product-list
-  [products]="foodProducts"
-  (productClick)="onProductClick($event)"
-/>
+
+<main class="page-content">
+  <lib-title title="Essen" />
+  <lib-product-list
+    [products]="foodProducts"
+    (productClick)="onProductClick($event)"
+  />
+</main>
+
 <lib-footer />
