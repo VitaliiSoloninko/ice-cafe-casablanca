@@ -1,13 +1,26 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
+  ROUTE_CONTACT,
+  ROUTE_DESERT,
+  ROUTE_DRINK,
+  ROUTE_FOOD,
+  ROUTE_ICE,
+} from '@ice-cafe-casablanca/domain';
+import {
   CakeSlice,
   CupSoda,
   Hamburger,
   IceCreamCone,
   LucideAngularModule,
+  LucideIconData,
   MapPinned,
 } from 'lucide-angular';
+
+export interface FooterMenuItem {
+  link: string;
+  icon: LucideIconData;
+}
 
 @Component({
   selector: 'lib-footer',
@@ -17,9 +30,26 @@ import {
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  readonly iceCreamCone = IceCreamCone;
-  readonly cupSoda = CupSoda;
-  readonly cakeSlice = CakeSlice;
-  readonly hamburger = Hamburger;
-  readonly mapPinned = MapPinned;
+  menuItems: FooterMenuItem[] = [
+    {
+      link: ROUTE_ICE,
+      icon: IceCreamCone,
+    },
+    {
+      link: ROUTE_DRINK,
+      icon: CupSoda,
+    },
+    {
+      link: ROUTE_DESERT,
+      icon: CakeSlice,
+    },
+    {
+      link: ROUTE_FOOD,
+      icon: Hamburger,
+    },
+    {
+      link: ROUTE_CONTACT,
+      icon: MapPinned,
+    },
+  ];
 }

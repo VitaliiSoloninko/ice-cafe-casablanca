@@ -2,31 +2,17 @@
   <div class="footer__menu">
     <nav class="footer__body">
       <ul class="menu__list">
-        <li class="menu__item">
-          <a routerLink="/ice" routerLinkActive="active" class="menu__link">
-            <lucide-icon [img]="iceCreamCone" class="my-icon"></lucide-icon>
-          </a>
-        </li>
-        <li class="menu__item">
-          <a routerLink="/drink" routerLinkActive="active" class="menu__link">
-            <lucide-icon [img]="cupSoda" class="my-icon"></lucide-icon>
-          </a>
-        </li>
-        <li class="menu__item">
-          <a routerLink="/desert" routerLinkActive="active" class="menu__link">
-            <lucide-icon [img]="cakeSlice" class="my-icon"></lucide-icon>
-          </a>
-        </li>
-        <li class="menu__item">
-          <a routerLink="/food" routerLinkActive="active" class="menu__link">
-            <lucide-icon [img]="hamburger" class="my-icon"></lucide-icon>
-          </a>
-        </li>
-        <li class="menu__item">
-          <a routerLink="/contact" routerLinkActive="active" class="menu__link">
-            <lucide-icon [img]="mapPinned" class="my-icon"></lucide-icon>
-          </a>
-        </li>
+        @for (menuItem of menuItems; track menuItem.link) {
+          <li class="menu__item">
+            <a
+              [routerLink]="menuItem.link"
+              routerLinkActive="active"
+              class="menu__link"
+            >
+              <lucide-icon [img]="menuItem.icon" class="my-icon"></lucide-icon>
+            </a>
+          </li>
+        }
       </ul>
     </nav>
   </div>

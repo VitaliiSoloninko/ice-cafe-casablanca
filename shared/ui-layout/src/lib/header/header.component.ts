@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import {
+  ROUTE_CONTACT,
+  ROUTE_DESERT,
+  ROUTE_DRINK,
+  ROUTE_FOOD,
+  ROUTE_ICE,
+} from '@ice-cafe-casablanca/domain';
 
 export interface MenuItem {
   name: string;
@@ -17,23 +24,23 @@ export class HeaderComponent {
   menuItems: MenuItem[] = [
     {
       name: 'Eis',
-      link: '/ice',
+      link: ROUTE_ICE,
     },
     {
       name: 'Getränke',
-      link: '/drink',
+      link: ROUTE_DRINK,
     },
     {
       name: 'Nachtisch',
-      link: '/desert',
+      link: ROUTE_DESERT,
     },
     {
       name: 'Essen',
-      link: '/food',
+      link: ROUTE_FOOD,
     },
     {
       name: 'Kontakte',
-      link: '/contact',
+      link: ROUTE_CONTACT,
     },
   ];
 }
