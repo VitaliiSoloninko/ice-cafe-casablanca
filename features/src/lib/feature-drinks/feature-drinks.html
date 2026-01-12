@@ -1,9 +1,19 @@
 <lib-header />
 
 <main class="page-content">
-  <lib-title title="Getränke" />
+  <lib-title title="Mocktails und Getränke" />
   <lib-product-list
     [products]="drinksProducts"
+    (productClick)="onProductClick($event)"
+  />
+  <lib-title title="Kaffee" />
+  <lib-product-list
+    [products]="hotDrinksProducts"
+    (productClick)="onProductClick($event)"
+  />
+  <lib-title title="Tee" />
+  <lib-product-list
+    [products]="teaProducts"
     (productClick)="onProductClick($event)"
   />
 </main>

@@ -6,7 +6,11 @@ import {
   TitleComponent,
 } from '@ice-cafe-casablanca/ui-layout';
 import { ProductListComponent } from '@ice-cafe-casablanca/ui-product';
-import { COLD_DRINKS } from 'shared/data-access/src/lib/data/drinks.data';
+import {
+  COLD_DRINKS,
+  HOT_DRINKS,
+  TEA,
+} from 'shared/data-access/src/lib/data/drinks.data';
 
 @Component({
   selector: 'lib-feature-drinks',
@@ -22,9 +26,13 @@ import { COLD_DRINKS } from 'shared/data-access/src/lib/data/drinks.data';
 })
 export class FeatureDrinks implements OnInit {
   drinksProducts: Product[] = [];
+  hotDrinksProducts: Product[] = [];
+  teaProducts: Product[] = [];
 
   ngOnInit(): void {
     this.drinksProducts = COLD_DRINKS;
+    this.hotDrinksProducts = HOT_DRINKS;
+    this.teaProducts = TEA;
   }
 
   onProductClick(product: Product): void {
