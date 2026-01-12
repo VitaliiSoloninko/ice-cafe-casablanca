@@ -27,6 +27,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  list-style: none;
 }
 
 .menu__link {
@@ -36,6 +37,7 @@ footer {
   padding: 1rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
   transition: color 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 
   &.active {
     background-color: var(--main-color-dark);
