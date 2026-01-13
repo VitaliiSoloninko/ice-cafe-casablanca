@@ -1,5 +1,5 @@
 import { CurrencyPipe, UpperCasePipe } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 import { Product } from '@ice-cafe-casablanca/domain';
 
 @Component({
@@ -10,7 +10,7 @@ import { Product } from '@ice-cafe-casablanca/domain';
   styleUrl: './product-modal.component.scss',
 })
 export class ProductModalComponent {
-  @Input() product: Product | null = null;
+  product = input<Product | null>(null);
   @Output() closeModal = new EventEmitter<void>();
 
   onClose() {
