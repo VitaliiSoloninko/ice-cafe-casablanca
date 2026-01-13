@@ -26,17 +26,29 @@ import {
 })
 export class FeatureFood implements OnInit {
   foodProducts: Product[] = [];
-  selectedProduct: Product | null = null;
+  selectedProductIndex: number | null = null;
 
   ngOnInit(): void {
     this.foodProducts = FOOD_PRODUCTS;
   }
 
   onProductClick(product: Product): void {
-    this.selectedProduct = product;
+    this.selectedProductIndex = this.foodProducts.findIndex(
+      (p) => p.id === product.id,
+    );
   }
 
   onCloseModal(): void {
-    this.selectedProduct = null;
+    this.selectedProductIndex = null;
+  }
+
+  onIndexChange(newIndex: number): void {
+    this.selectedProductIndex = newIndex;
+  }
+
+  get selectedProduct(): Product | null {
+    return this.selectedProductIndex !== null
+      ? this.foodProducts[this.selectedProductIndex]
+      : null;
   }
 }

@@ -10,6 +10,12 @@
 
 <lib-footer />
 
-@if (selectedProduct) {
-<lib-product-modal [product]="selectedProduct" (closeModal)="onCloseModal()" />
+@if (selectedProductIndex !== null) {
+<lib-product-modal
+  [product]="selectedProduct"
+  [products]="foodProducts"
+  [currentIndex]="selectedProductIndex"
+  (closeModal)="onCloseModal()"
+  (indexChange)="onIndexChange($event)"
+/>
 }
