@@ -6,7 +6,10 @@ import {
   HeaderComponent,
   TitleComponent,
 } from '@ice-cafe-casablanca/ui-layout';
-import { ProductListComponent } from '@ice-cafe-casablanca/ui-product';
+import {
+  ProductListComponent,
+  ProductModalComponent,
+} from '@ice-cafe-casablanca/ui-product';
 
 @Component({
   selector: 'lib-feature-ice',
@@ -16,18 +19,24 @@ import { ProductListComponent } from '@ice-cafe-casablanca/ui-product';
     FooterComponent,
     TitleComponent,
     ProductListComponent,
+    ProductModalComponent,
   ],
   templateUrl: './feature-ice.html',
   styleUrl: './feature-ice.scss',
 })
 export class FeatureIce implements OnInit {
   iceProducts: Product[] = [];
+  selectedProduct: Product | null = null;
 
   ngOnInit(): void {
     this.iceProducts = ICE_PRODUCTS;
   }
 
   onProductClick(product: Product): void {
-    console.log('Product clicked:', product);
+    this.selectedProduct = product;
+  }
+
+  onCloseModal(): void {
+    this.selectedProduct = null;
   }
 }

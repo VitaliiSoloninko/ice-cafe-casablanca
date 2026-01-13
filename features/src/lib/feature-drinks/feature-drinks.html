@@ -19,3 +19,7 @@
 </main>
 
 <lib-footer />
+
+@if (selectedProduct) {
+<lib-product-modal [product]="selectedProduct" (closeModal)="onCloseModal()" />
+}

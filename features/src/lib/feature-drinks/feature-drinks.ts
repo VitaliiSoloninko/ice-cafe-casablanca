@@ -5,7 +5,10 @@ import {
   HeaderComponent,
   TitleComponent,
 } from '@ice-cafe-casablanca/ui-layout';
-import { ProductListComponent } from '@ice-cafe-casablanca/ui-product';
+import {
+  ProductListComponent,
+  ProductModalComponent,
+} from '@ice-cafe-casablanca/ui-product';
 import {
   COLD_DRINKS,
   HOT_DRINKS,
@@ -20,6 +23,7 @@ import {
     FooterComponent,
     TitleComponent,
     ProductListComponent,
+    ProductModalComponent,
   ],
   templateUrl: './feature-drinks.html',
   styleUrl: './feature-drinks.scss',
@@ -28,6 +32,7 @@ export class FeatureDrinks implements OnInit {
   drinksProducts: Product[] = [];
   hotDrinksProducts: Product[] = [];
   teaProducts: Product[] = [];
+  selectedProduct: Product | null = null;
 
   ngOnInit(): void {
     this.drinksProducts = COLD_DRINKS;
@@ -36,6 +41,10 @@ export class FeatureDrinks implements OnInit {
   }
 
   onProductClick(product: Product): void {
-    console.log('Product clicked:', product);
+    this.selectedProduct = product;
+  }
+
+  onCloseModal(): void {
+    this.selectedProduct = null;
   }
 }
