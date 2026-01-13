@@ -11,9 +11,11 @@
     <img src="assets/images/svg/x.svg" alt="x" />
   </button>
 
-  @if (products().length > 1) {
-    <div class="modal-counter">{{ currentPosition }}</div>
-  }
+  <lib-product-slider
+    [products]="products()"
+    [currentIndex]="currentIndex()"
+    (indexChange)="onIndexChange($event)"
+  />
 
   @if (product()) {
     <div class="product__item">
@@ -36,43 +38,5 @@
         </div>
       </div>
     </div>
-  }
-
-  @if (hasPrevious) {
-    <button
-      class="modal-nav modal-nav-prev"
-      (click)="previousProduct()"
-      aria-label="Previous product"
-    >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </button>
-  }
-
-  @if (hasNext) {
-    <button
-      class="modal-nav modal-nav-next"
-      (click)="nextProduct()"
-      aria-label="Next product"
-    >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </button>
   }
 </div>
