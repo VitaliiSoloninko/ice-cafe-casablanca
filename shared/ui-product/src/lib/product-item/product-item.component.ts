@@ -1,5 +1,5 @@
 import { CurrencyPipe, UpperCasePipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Product } from '@ice-cafe-casablanca/domain';
 
 @Component({
@@ -10,5 +10,5 @@ import { Product } from '@ice-cafe-casablanca/domain';
   styleUrl: './product-item.component.scss',
 })
 export class ProductItemComponent {
-  @Input() product!: Product;
+  product = input<Product>();
 }
