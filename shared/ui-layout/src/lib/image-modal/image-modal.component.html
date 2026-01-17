@@ -1,0 +1,27 @@
+<div
+  class="modal-backdrop"
+  (click)="onClose()"
+  (keyup.escape)="onClose()"
+  tabindex="0"
+  role="button"
+  aria-label="Close modal"
+></div>
+<div class="modal">
+  <button class="modal-close" (click)="onClose()">
+    <img src="/assets/images/svg/x.svg" alt="x" />
+  </button>
+
+  <lib-product-slider
+    [products]="imagesAsProducts"
+    [currentIndex]="currentIndex()"
+    (indexChange)="onIndexChange($event)"
+  />
+
+  @if (image()) {
+    <div class="image__item">
+      <div class="item-image">
+        <img [src]="image()?.image" [alt]="image()?.title" />
+      </div>
+    </div>
+  }
+</div>

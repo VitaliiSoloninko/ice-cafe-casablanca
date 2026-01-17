@@ -1,0 +1,13 @@
+:host {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  justify-content: center;
+  @media (max-width: 520px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: 360px) {
+    gap: 0.5rem;
+  }
+}

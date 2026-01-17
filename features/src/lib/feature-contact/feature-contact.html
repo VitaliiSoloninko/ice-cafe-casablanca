@@ -1,0 +1,66 @@
+<lib-header />
+
+<main class="page-content">
+  <lib-title title="Kontakte" />
+
+  <div class="contact-section">
+    <h2 class="h2 mb16">Öffnungszeiten</h2>
+    <p>Montags geschlossen</p>
+    <p>Dienstag - Freitag 14:00 - 19.30 Uhr</p>
+    <p class="mb16">Samstag - Sonntag 13.00 - 19.30 Uhr</p>
+
+    <h2 class="h2 mb16 mt16">Unsere Galerie</h2>
+    <lib-image-list
+      [images]="cafeImages"
+      (imageClick)="onImageClick($event)"
+      class="gallery"
+    />
+
+    <h2 class="h2 mb16 mt16">Kontaktdaten</h2>
+    <div class="contacts">
+      <a href="tel:+49152235687" class="contacts__item contacts__item_phone"
+        >0152 - 235687</a
+      >
+      <a
+        href="mailto:eiscafecasablanca@gmail.com"
+        class="contacts__item contacts__item_email"
+        >eiscafecasablanca&#64;gmail.com</a
+      >
+      <a
+        href="https://www.google.com/maps/place/Max-Suhrbier-Stra%C3%9Fe+61,+19059+Schwerin/@53.6387271,11.3952613,18.8z/data=!4m6!3m5!1s0x47adda2544d7b039:0x129e70a7560aa1e6!8m2!3d53.6389836!4d11.3961115!16s%2Fg%2F11f7jdw8nh?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D"
+        class="contacts__item contacts__item_map"
+        >Max-Suhrbier-Straße 61, <br />19059, Schwerin</a
+      >
+    </div>
+
+    <div class="map__item mt16 mb16">
+      <a
+        href="https://www.google.com/maps/place/Max-Suhrbier-Stra%C3%9Fe+61,+19059+Schwerin/@53.6387271,11.3952613,18.8z/data=!4m6!3m5!1s0x47adda2544d7b039:0x129e70a7560aa1e6!8m2!3d53.6389836!4d11.3961115!16s%2Fg%2F11f7jdw8nh?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D"
+        class="item-image"
+      >
+        <img src="assets/images/contact/map.jpg" alt="Address" />
+      </a>
+    </div>
+
+    <div class="contacts mb16">
+      <li class="contacts__item contacts__item_bus">
+        2 Min. von Station Robert-Beltz-Straße
+      </li>
+      <li class="contacts__item contacts__item_school">
+        5 Min. von Goethe-Gymnasium
+      </li>
+    </div>
+  </div>
+</main>
+
+<lib-footer />
+
+@if (selectedImageIndex !== null) {
+<lib-image-modal
+  [image]="selectedImage"
+  [images]="cafeImages"
+  [currentIndex]="selectedImageIndex"
+  (closeModal)="onCloseModal()"
+  (indexChange)="onIndexChange($event)"
+/>
+}

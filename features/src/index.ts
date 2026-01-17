@@ -1,3 +1,4 @@
+export * from './lib/feature-contact/feature-contact';
 export * from './lib/feature-dessert/feature-dessert';
 export * from './lib/feature-drinks/feature-drinks';
 export * from './lib/feature-food/feature-food';

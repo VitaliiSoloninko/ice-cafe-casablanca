@@ -26,6 +26,13 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'contact',
+    loadComponent: () =>
+      import('@ice-cafe-casablanca/feature-contact').then(
+        (m) => m.FeatureContact,
+      ),
+  },
+  {
     path: '',
     redirectTo: 'ice',
     pathMatch: 'full',
