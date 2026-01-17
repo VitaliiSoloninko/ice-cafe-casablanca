@@ -1,0 +1,12 @@
+<h2 class="h2 mb16 mt16">{{ title }}</h2>
+<lib-image-list [images]="images" (imageClick)="onImageClick($event)" />
+
+@if (selectedImageIndex !== null) {
+<lib-image-modal
+  [image]="selectedImage"
+  [images]="images"
+  [currentIndex]="selectedImageIndex"
+  (closeModal)="onCloseModal()"
+  (indexChange)="onIndexChange($event)"
+/>
+}

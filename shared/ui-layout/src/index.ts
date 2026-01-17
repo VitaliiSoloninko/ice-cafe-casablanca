@@ -1,3 +1,4 @@
+export * from './lib/cafe-gallery/cafe-gallery';
 export * from './lib/footer/footer.component';
 export * from './lib/header/header.component';
 export * from './lib/image-item/image-item.component';
