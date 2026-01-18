@@ -1,1 +1,2 @@
-export * from './lib/util-seo/util-seo';
+export * from './lib/models/seo-data.interface';
+export * from './lib/utils/seo.service';

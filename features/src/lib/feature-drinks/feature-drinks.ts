@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Product } from '@ice-cafe-casablanca/domain';
 import {
   FooterComponent,
@@ -9,6 +9,7 @@ import {
   ProductListComponent,
   ProductModalComponent,
 } from '@ice-cafe-casablanca/ui-product';
+import { SeoService } from '@ice-cafe-casablanca/util-seo';
 import {
   COLD_DRINKS,
   HOT_DRINKS,
@@ -29,6 +30,8 @@ import {
   styleUrl: './feature-drinks.scss',
 })
 export class FeatureDrinks implements OnInit {
+  private readonly seoService = inject(SeoService);
+
   drinksProducts: Product[] = [];
   hotDrinksProducts: Product[] = [];
   teaProducts: Product[] = [];
@@ -44,6 +47,16 @@ export class FeatureDrinks implements OnInit {
       ...this.hotDrinksProducts,
       ...this.teaProducts,
     ];
+    this.setSeo();
+  }
+
+  private setSeo(): void {
+    this.seoService.setSeo({
+      title: 'Getränke – Ice Cafe Casablanca',
+      description:
+        'Erfrischende Getränke im Ice Cafe Casablanca. Kalte und heiße Getränke, Tee, Kaffee. Perfekte Ergänzung zu Desserts!',
+      keywords: 'Getränke, Drinks, Ice Cafe Casablanca, Kaffee, Tee, Limonade',
+    });
   }
 
   onProductClick(product: Product): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CAFE_IMAGES } from '@ice-cafe-casablanca/data-access';
 import { CafeImage } from '@ice-cafe-casablanca/domain';
 import {
@@ -7,6 +7,7 @@ import {
   HeaderComponent,
   TitleComponent,
 } from '@ice-cafe-casablanca/ui-layout';
+import { SeoService } from '@ice-cafe-casablanca/util-seo';
 import { ContactInfoComponent } from '../contact-info/contact-info';
 
 @Component({
@@ -23,9 +24,22 @@ import { ContactInfoComponent } from '../contact-info/contact-info';
   styleUrl: './feature-contact.scss',
 })
 export class FeatureContact implements OnInit {
+  private readonly seoService = inject(SeoService);
+
   cafeImages: CafeImage[] = [];
 
   ngOnInit(): void {
     this.cafeImages = CAFE_IMAGES;
+    this.setSeo();
+  }
+
+  private setSeo(): void {
+    this.seoService.setSeo({
+      title: 'Kontakt – Ice Cafe Casablanca',
+      description:
+        'Kontaktieren Sie Ice Cafe Casablanca. Adresse, Telefon, Öffnungszeiten. Wir freuen uns auf Ihren Besuch in unserem gemütlichen Café!',
+      keywords:
+        'Kontakt, Ice Cafe Casablanca, Adresse, Telefon, Café Deutschland',
+    });
   }
 }
