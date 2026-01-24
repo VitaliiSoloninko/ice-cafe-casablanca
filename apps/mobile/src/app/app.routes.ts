@@ -10,6 +10,11 @@ export const appRoutes: Route[] = [
         loadComponent: () => import('./ice/ice.page').then((m) => m.IcePage),
       },
       {
+        path: 'drinks',
+        loadComponent: () =>
+          import('./drinks/drinks.page').then((m) => m.DrinksPage),
+      },
+      {
         path: '',
         redirectTo: 'ice',
         pathMatch: 'full',
