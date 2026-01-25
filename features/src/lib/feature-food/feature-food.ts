@@ -1,11 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FOOD_PRODUCTS } from '@ice-cafe-casablanca/data-access';
 import { Product } from '@ice-cafe-casablanca/domain';
-import {
-  FooterComponent,
-  HeaderComponent,
-  TitleComponent,
-} from '@ice-cafe-casablanca/ui-layout';
+import { TitleComponent } from '@ice-cafe-casablanca/ui-layout';
 import {
   ProductListComponent,
   ProductModalComponent,
@@ -15,13 +11,7 @@ import { SeoService } from '@ice-cafe-casablanca/util-seo';
 @Component({
   selector: 'lib-feature-food',
   standalone: true,
-  imports: [
-    HeaderComponent,
-    FooterComponent,
-    TitleComponent,
-    ProductListComponent,
-    ProductModalComponent,
-  ],
+  imports: [TitleComponent, ProductListComponent, ProductModalComponent],
   templateUrl: './feature-food.html',
   styleUrl: './feature-food.scss',
 })

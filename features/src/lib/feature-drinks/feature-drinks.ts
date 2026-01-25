@@ -1,10 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Product } from '@ice-cafe-casablanca/domain';
-import {
-  FooterComponent,
-  HeaderComponent,
-  TitleComponent,
-} from '@ice-cafe-casablanca/ui-layout';
+import { TitleComponent } from '@ice-cafe-casablanca/ui-layout';
 import {
   ProductListComponent,
   ProductModalComponent,
@@ -19,13 +15,7 @@ import {
 @Component({
   selector: 'lib-feature-drinks',
   standalone: true,
-  imports: [
-    HeaderComponent,
-    FooterComponent,
-    TitleComponent,
-    ProductListComponent,
-    ProductModalComponent,
-  ],
+  imports: [TitleComponent, ProductListComponent, ProductModalComponent],
   templateUrl: './feature-drinks.html',
   styleUrl: './feature-drinks.scss',
 })

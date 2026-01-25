@@ -3,8 +3,6 @@ import { CAFE_IMAGES } from '@ice-cafe-casablanca/data-access';
 import { CafeImage } from '@ice-cafe-casablanca/domain';
 import {
   CafeGalleryComponent,
-  FooterComponent,
-  HeaderComponent,
   TitleComponent,
 } from '@ice-cafe-casablanca/ui-layout';
 import { SeoService } from '@ice-cafe-casablanca/util-seo';
@@ -13,13 +11,7 @@ import { ContactInfoComponent } from '../contact-info/contact-info';
 @Component({
   selector: 'lib-feature-contact',
   standalone: true,
-  imports: [
-    HeaderComponent,
-    FooterComponent,
-    TitleComponent,
-    CafeGalleryComponent,
-    ContactInfoComponent,
-  ],
+  imports: [TitleComponent, CafeGalleryComponent, ContactInfoComponent],
   templateUrl: './feature-contact.html',
   styleUrl: './feature-contact.scss',
 })
