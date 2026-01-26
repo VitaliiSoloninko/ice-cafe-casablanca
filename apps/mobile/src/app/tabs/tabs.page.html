@@ -1,27 +1,19 @@
 <ion-tabs>
-  <!-- Область для отображения контента дочерних страниц -->
-  <router-outlet></router-outlet>
-
-  <!-- Tab bar внизу экрана -->
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="ice" href="/tabs/ice">
-      <ion-label>🧊 Eis</ion-label>
+    <ion-tab-button tab="ice">
+      <img src="/assets/images/svg/ice.svg" alt="Eis" />
     </ion-tab-button>
-
-    <ion-tab-button tab="drinks" href="/tabs/drinks">
-      <ion-label>🥤 Getränke</ion-label>
+    <ion-tab-button tab="drinks"
+      ><img src="/assets/images/svg/drink.svg" alt="Getränke" />
     </ion-tab-button>
-
-    <ion-tab-button tab="food" href="/tabs/food">
-      <ion-label>🍽️ Essen</ion-label>
+    <ion-tab-button tab="dessert">
+      <img src="/assets/images/svg/dessert.svg" alt="Desserts" />
     </ion-tab-button>
-
-    <ion-tab-button tab="dessert" href="/tabs/dessert">
-      <ion-label>🍰 Desserts</ion-label>
+    <ion-tab-button tab="food">
+      <img src="/assets/images/svg/food.svg" alt="Essen" />
     </ion-tab-button>
-
-    <ion-tab-button tab="contact" href="/tabs/contact">
-      <ion-label>📞 Kontakte</ion-label>
+    <ion-tab-button tab="contact">
+      <img src="/assets/images/svg/contact.svg" alt="Kontakte" />
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
