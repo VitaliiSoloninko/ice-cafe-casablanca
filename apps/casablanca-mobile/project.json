@@ -18,6 +18,11 @@
           {
             "glob": "**/*",
             "input": "apps/casablanca-mobile/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "shared/assets/src/lib",
+            "output": "assets"
           }
         ],
         "styles": ["apps/casablanca-mobile/src/styles.scss"]
