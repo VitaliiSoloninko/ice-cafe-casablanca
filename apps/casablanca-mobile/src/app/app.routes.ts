@@ -25,14 +25,14 @@ export const appRoutes: Route[] = [
       },
       {
         path: '',
-        redirectTo: 'ice',
+        redirectTo: 'tabs',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: 'ice',
+    redirectTo: 'tabs',
     pathMatch: 'full',
   },
 ];
