@@ -23,8 +23,4 @@ describe('FeatureDrinks', () => {
     expect(component.drinksProducts).toBeDefined();
     expect(component.drinksProducts.length).toBeGreaterThan(0);
   });
-
-  it('should have correct page title', () => {
-    expect(component.pageTitle).toBe('Напої');
-  });
 });

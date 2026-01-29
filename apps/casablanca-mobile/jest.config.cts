@@ -12,7 +12,12 @@ module.exports = {
       },
     ],
   },
-  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(@ionic|@stencil|ionicons|@angular))',
+  ],
+  moduleNameMapper: {
+    '^@ionic/core/loader$': '<rootDir>/../../node_modules/@ionic/core/loader/index.cjs.js',
+  },
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',

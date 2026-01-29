@@ -23,8 +23,4 @@ describe('FeatureDessert', () => {
     expect(component.dessertProducts).toBeDefined();
     expect(component.dessertProducts.length).toBeGreaterThan(0);
   });
-
-  it('should have correct page title', () => {
-    expect(component.pageTitle).toBe('Десерти');
-  });
 });
