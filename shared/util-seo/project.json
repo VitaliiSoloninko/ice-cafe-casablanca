@@ -4,7 +4,7 @@
   "sourceRoot": "shared/util-seo/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": ["type:util"],
+  "tags": ["type:util", "scope:shared", "platform:browser"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

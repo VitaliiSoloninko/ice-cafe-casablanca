@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/casablanca-mobile-e2e/src",
   "implicitDependencies": ["casablanca-mobile"],
+  "tags": ["type:e2e", "scope:mobile"],
   "// targets": "to see all targets run: nx show project casablanca-mobile-e2e --web",
   "targets": {}
 }
