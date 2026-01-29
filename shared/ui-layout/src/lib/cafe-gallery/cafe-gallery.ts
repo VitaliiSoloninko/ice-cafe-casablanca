@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CafeImage } from '@ice-cafe-casablanca/domain';
 import { ImageListComponent } from '../image-list/image-list.component';
 import { ImageModalComponent } from '../image-modal/image-modal.component';
@@ -10,13 +10,11 @@ import { ImageModalComponent } from '../image-modal/image-modal.component';
   templateUrl: './cafe-gallery.html',
   styleUrl: './cafe-gallery.scss',
 })
-export class CafeGalleryComponent implements OnInit {
+export class CafeGalleryComponent {
   @Input() images: CafeImage[] = [];
-  @Input() title: string = 'Unsere Galerie';
+  @Input() title = 'Unsere Galerie';
 
   selectedImageIndex: number | null = null;
-
-  ngOnInit(): void {}
 
   onImageClick(image: CafeImage): void {
     this.selectedImageIndex = this.images.findIndex(

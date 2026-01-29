@@ -1,11 +1,11 @@
 import { Component, input, output } from '@angular/core';
 import { CafeImage } from '@ice-cafe-casablanca/domain';
-import { ProductSliderComponent } from '@ice-cafe-casablanca/ui-product';
+import { ImageSliderComponent } from '../image-slider/image-slider.component';
 
 @Component({
   selector: 'lib-image-modal',
   standalone: true,
-  imports: [ProductSliderComponent],
+  imports: [ImageSliderComponent],
   templateUrl: './image-modal.component.html',
   styleUrl: './image-modal.component.scss',
 })
@@ -22,15 +22,5 @@ export class ImageModalComponent {
 
   onIndexChange(newIndex: number) {
     this.indexChange.emit(newIndex);
-  }
-
-  get imagesAsProducts() {
-    return this.images().map((img) => ({
-      id: img.id,
-      name: img.title,
-      description: '',
-      price: 0,
-      image: img.image,
-    }));
   }
 }

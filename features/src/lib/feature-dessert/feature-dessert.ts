@@ -1,12 +1,11 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { DESSERT_PRODUCTS } from '@ice-cafe-casablanca/data-access';
-import { Product } from '@ice-cafe-casablanca/domain';
+import { Product, SeoService } from '@ice-cafe-casablanca/domain';
 import { TitleComponent } from '@ice-cafe-casablanca/ui-layout';
 import {
   ProductListComponent,
   ProductModalComponent,
 } from '@ice-cafe-casablanca/ui-product';
-import { SeoService } from '@ice-cafe-casablanca/util-seo';
 
 @Component({
   selector: 'lib-feature-dessert',
@@ -16,7 +15,7 @@ import { SeoService } from '@ice-cafe-casablanca/util-seo';
   styleUrl: './feature-dessert.scss',
 })
 export class FeatureDessert implements OnInit {
-  private readonly seoService = inject(SeoService);
+  private readonly seoService = inject(SeoService, { optional: true });
 
   dessertProducts: Product[] = [];
   selectedProductIndex: number | null = null;
@@ -27,13 +26,15 @@ export class FeatureDessert implements OnInit {
   }
 
   private setSeo(): void {
-    this.seoService.setSeo({
-      title: 'Desserts – Ice Cafe Casablanca',
-      description:
-        'Hausgemachte Desserts im Ice Cafe Casablanca. Köstliche Süßigkeiten, Torten, Kuchen. Mit Liebe zubereitet!',
-      keywords:
-        'Desserts, Nachtisch, Ice Cafe Casablanca, Torten, Kuchen, Süßigkeiten',
-    });
+    if (this.seoService) {
+      this.seoService.setSeo({
+        title: 'Desserts – Ice Cafe Casablanca',
+        description:
+          'Hausgemachte Desserts im Ice Cafe Casablanca. Köstliche Süßigkeiten, Torten, Kuchen. Mit Liebe zubereitet!',
+        keywords:
+          'Desserts, Nachtisch, Ice Cafe Casablanca, Torten, Kuchen, Süßigkeiten',
+      });
+    }
   }
 
   onProductClick(product: Product): void {

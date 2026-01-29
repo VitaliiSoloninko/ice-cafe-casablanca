@@ -10,7 +10,7 @@
   left: 50%;
   top: 50%;
   width: 90vw;
-  max-width: 600px;
+  max-width: 800px;
   max-height: 90vh;
   transform: translate(-50%, -50%);
   background: var(--dark-color);
@@ -18,7 +18,7 @@
   z-index: 1001;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .modal-close {

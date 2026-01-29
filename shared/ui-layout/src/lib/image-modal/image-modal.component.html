@@ -11,17 +11,9 @@
     <img src="/assets/images/svg/x.svg" alt="x" />
   </button>
 
-  <lib-product-slider
-    [products]="imagesAsProducts"
+  <lib-image-slider
+    [images]="images()"
     [currentIndex]="currentIndex()"
     (indexChange)="onIndexChange($event)"
   />
-
-  @if (image()) {
-    <div class="image__item">
-      <div class="item-image">
-        <img [src]="image()?.image" [alt]="image()?.title" />
-      </div>
-    </div>
-  }
 </div>

@@ -1,0 +1,51 @@
+@if (images().length > 1) {
+  <div class="slider-counter">{{ currentPosition }}</div>
+
+  @if (hasPrevious) {
+    <button
+      class="slider-nav slider-nav-prev"
+      (click)="previousImage()"
+      aria-label="Previous image"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+  }
+
+  @if (hasNext) {
+    <button
+      class="slider-nav slider-nav-next"
+      (click)="nextImage()"
+      aria-label="Next image"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  }
+}
+
+@if (images()[currentIndex()]; as currentImage) {
+  <div class="slider-container">
+    <img
+      [src]="currentImage.image"
+      [alt]="currentImage.title"
+      class="slider-image"
+    />
+  </div>
+}

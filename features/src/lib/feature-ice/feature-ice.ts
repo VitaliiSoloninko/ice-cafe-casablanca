@@ -1,12 +1,11 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ICE_PRODUCTS } from '@ice-cafe-casablanca/data-access';
-import { Product } from '@ice-cafe-casablanca/domain';
+import { Product, SeoService } from '@ice-cafe-casablanca/domain';
 import { TitleComponent } from '@ice-cafe-casablanca/ui-layout';
 import {
   ProductListComponent,
   ProductModalComponent,
 } from '@ice-cafe-casablanca/ui-product';
-import { SeoService } from '@ice-cafe-casablanca/util-seo';
 
 @Component({
   selector: 'lib-feature-ice',
@@ -16,7 +15,7 @@ import { SeoService } from '@ice-cafe-casablanca/util-seo';
   styleUrl: './feature-ice.scss',
 })
 export class FeatureIce implements OnInit {
-  private readonly seoService = inject(SeoService);
+  private readonly seoService = inject(SeoService, { optional: true });
 
   iceProducts: Product[] = [];
   selectedProductIndex: number | null = null;
@@ -27,12 +26,14 @@ export class FeatureIce implements OnInit {
   }
 
   private setSeo(): void {
-    this.seoService.setSeo({
-      title: 'Eiscreme – Ice Cafe Casablanca',
-      description:
-        'Bestes Eis im Ice Cafe Casablanca. Frische Zutaten, große Auswahl an Geschmacksrichtungen. Probieren Sie unser hausgemachtes Eis!',
-      keywords: 'Eiscreme, Eis, Ice Cafe Casablanca, Desserts, Süßigkeiten',
-    });
+    if (this.seoService) {
+      this.seoService.setSeo({
+        title: 'Eiscreme – Ice Cafe Casablanca',
+        description:
+          'Bestes Eis im Ice Cafe Casablanca. Frische Zutaten, große Auswahl an Geschmacksrichtungen. Probieren Sie unser hausgemachtes Eis!',
+        keywords: 'Eiscreme, Eis, Ice Cafe Casablanca, Desserts, Süßigkeiten',
+      });
+    }
   }
 
   onProductClick(product: Product): void {
