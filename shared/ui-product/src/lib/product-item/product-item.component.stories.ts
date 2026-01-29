@@ -22,7 +22,7 @@ const sampleProduct: Product = {
   name: 'Schokoladeneis',
   description: 'Cremiges Schokoladeneis aus hochwertiger Schokolade',
   price: 3.5,
-  image: 'assets/products/chocolate-ice.jpg',
+  image: 'assets/images/ice/chocolate.jpeg',
 };
 
 export const Default: Story = {
@@ -38,7 +38,7 @@ export const Vanilla: Story = {
       name: 'Vanilleeis',
       description: 'Klassisches Vanilleeis mit echten Vanilleschoten',
       price: 3.0,
-      image: 'assets/products/vanilla-ice.jpg',
+      image: 'assets/images/ice/vanilla.jpeg',
     },
   },
 };
@@ -50,7 +50,7 @@ export const Strawberry: Story = {
       name: 'Erdbeereis',
       description: 'Frisches Erdbeereis aus reifen Erdbeeren',
       price: 3.8,
-      image: 'assets/products/strawberry-ice.jpg',
+      image: 'assets/images/ice/strawberry.jpeg',
     },
   },
 };
@@ -62,7 +62,7 @@ export const ExpensiveProduct: Story = {
       name: 'Premium Pistazieneis',
       description: 'Exklusives Pistazieneis mit sizilianischen Pistazien',
       price: 5.5,
-      image: 'assets/products/pistachio-ice.jpg',
+      image: 'assets/images/ice/pistachio.jpeg',
     },
   },
 };
@@ -75,7 +75,7 @@ export const LongName: Story = {
       description:
         'Eine außergewöhnliche Kombination aus Schokolade, gerösteten Nüssen und cremigem Karamell',
       price: 4.5,
-      image: 'assets/products/special-ice.jpg',
+      image: 'assets/images/ice/hagelnut.jpeg',
     },
   },
 };

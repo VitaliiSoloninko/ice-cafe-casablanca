@@ -39,21 +39,21 @@ const sampleProducts: Product[] = [
     name: 'Schokoladeneis',
     description: 'Cremiges Schokoladeneis aus hochwertiger Schokolade',
     price: 3.5,
-    image: 'assets/products/chocolate-ice.jpg',
+    image: 'assets/images/ice/chocolate.jpeg',
   },
   {
     id: 2,
     name: 'Vanilleeis',
     description: 'Klassisches Vanilleeis mit echten Vanilleschoten',
     price: 3.0,
-    image: 'assets/products/vanilla-ice.jpg',
+    image: 'assets/images/ice/vanilla.jpeg',
   },
   {
     id: 3,
     name: 'Erdbeereis',
     description: 'Frisches Erdbeereis aus reifen Erdbeeren',
     price: 3.8,
-    image: 'assets/products/strawberry-ice.jpg',
+    image: 'assets/images/ice/strawberry.jpeg',
   },
 ];
 
@@ -89,7 +89,7 @@ export const LongDescription: Story = {
       description:
         'Exklusives Pistazieneis mit sizilianischen Pistazien. Hergestellt aus den besten Zutaten und mit viel Liebe zum Detail. Dieses Eis ist ein wahrer Genuss für alle Liebhaber von Pistazien und bietet ein unvergleichliches Geschmackserlebnis.',
       price: 5.5,
-      image: 'assets/products/pistachio-ice.jpg',
+      image: 'assets/images/ice/pistachio.jpeg',
     },
     products: sampleProducts,
     currentIndex: 0,
