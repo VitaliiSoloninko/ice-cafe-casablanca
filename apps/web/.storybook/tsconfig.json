@@ -10,6 +10,16 @@
     "../src/**/*.stories.jsx",
     "../src/**/*.stories.tsx",
     "../src/**/*.stories.mdx",
+    "../../../shared/**/src/**/*.stories.ts",
+    "../../../shared/**/src/**/*.stories.js",
+    "../../../shared/**/src/**/*.stories.jsx",
+    "../../../shared/**/src/**/*.stories.tsx",
+    "../../../shared/**/src/**/*.stories.mdx",
+    "../../../features/src/**/*.stories.ts",
+    "../../../features/src/**/*.stories.js",
+    "../../../features/src/**/*.stories.jsx",
+    "../../../features/src/**/*.stories.tsx",
+    "../../../features/src/**/*.stories.mdx",
     "*.js",
     "*.ts"
   ]
