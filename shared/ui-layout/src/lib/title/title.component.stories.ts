@@ -22,7 +22,7 @@ export const Default: Story = {
   },
 };
 
-export const IceCream: Story = {
+export const Ice: Story = {
   args: {
     title: 'Eis',
   },
