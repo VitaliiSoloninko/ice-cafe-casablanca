@@ -1,5 +1,7 @@
-.product__item {
+.item {
   background: rgba(129, 129, 139, 0.1);
+  max-width: 250px;
+  width: 100%;
   border-radius: 24px;
   overflow: hidden;
   display: flex;
@@ -15,23 +17,6 @@
 
 .item-header {
   position: relative;
-}
-
-.item-number {
-  position: absolute;
-  height: 2.4rem;
-  width: 2.4rem;
-  bottom: 0.5rem;
-  left: 0.5rem;
-  background: var(--red-color);
-  border-radius: 50%;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .item-price {
@@ -78,5 +63,5 @@
 
 .item-title {
   margin-block-start: 0;
-  margin-block-end: 0.5rem;
+  margin-block-end: 0;
 }

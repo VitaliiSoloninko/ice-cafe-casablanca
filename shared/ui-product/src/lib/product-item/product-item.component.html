@@ -1,4 +1,4 @@
-<div class="product__item">
+<div class="item">
   <div class="item-header">
     <div class="item-image">
       <img [src]="product()?.image" alt="Image" />
@@ -11,8 +11,5 @@
     <h4 class="item-title">
       <div class="item-link-title">{{ product()?.name | uppercase }}</div>
     </h4>
-    <div class="item-description">
-      {{ product()?.description }}
-    </div>
   </div>
 </div>
